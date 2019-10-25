@@ -1,0 +1,35 @@
+<h2>Quote engine</h2>
+<div class="container">
+     <div class="row">
+        <div class="col-sm-3" *ngFor='let quote of quotes; let i = index'>
+           <div class="card">
+               <div class="card-body">
+                    {{quote.addedquote}} 
+               </div>
+               <div class="card-footer">
+                    {{quote.postDate | date}}
+                    <button (click)='toggleDetails(i)'>More details</button>
+                    <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote'></app-quote-detail>
+               </div>
+           </div> 
+        </div>
+    </div>
+</div>
+
+   
+
+
+    <!-- <ul>
+        <li *ngFor='let quote of quotes'>
+            <div class="card">
+                <div class="card-body">
+                    {{quote}}
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div *ngFor='let quote of quotes'>
+        <div>
+
+        </div>
+    </div> -->
