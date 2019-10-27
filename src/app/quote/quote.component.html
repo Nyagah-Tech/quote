@@ -9,11 +9,13 @@
                <div class="card-footer">
                     {{quote.postDate | date}}
                     <button (click)='toggleDetails(i)'>More details</button>
-                    <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote'></app-quote-detail>
+                    <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-detail>
+                    
                </div>
            </div> 
         </div>
     </div>
+    <app-quoteform (addquote)="addNewQuote($event)"></app-quoteform>
 </div>
 
    
