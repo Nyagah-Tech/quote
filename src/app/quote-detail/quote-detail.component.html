@@ -1,5 +1,8 @@
-<p>posted by:{{quotes.description}}</p>
-<p>Author:{{quotes.author}}</p>
-<button>like</button>
-<button>dislike</button><br>
-<button (click)= 'quoteComplete(true)'>Delete quote</button>
+<div id="detail">
+    <p>posted by:{{quotes.description}}</p>
+    <p>Author:{{quotes.author}}</p>
+    <button id="like" (click)= 'upvote()'><img src="assets/like1.png" width="40px" height="35px" alt="">
+    </button>{{quotes.upvote}}
+    <button id="dis"(click)= 'downvote()'><img src="assets/dis1.png" width="40px" height="35px" alt=""></button>{{quotes.downvote}}<br>
+    <button id="del"  (click)= 'quoteComplete(true)'>Delete quote</button><br>
+</div>

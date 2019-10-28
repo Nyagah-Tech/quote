@@ -1,1 +1,33 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image:url("../src/assets/back2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+
+}
+h2{
+    font-family: 'Lobster', cursive;
+    font-size:110px;
+    color:rgb(100, 100, 100);
+}
+#quote1{
+    float: left;
+    padding-left: 10px;
+}
+#intro{
+    /* text-align: center; */
+    padding-left: 470px;
+    padding-right: 50px;
+    font-size: 37px;
+
+}
+/* #quote2{
+    position: absolute;
+    top:400px;
+    left:30%;
+} */

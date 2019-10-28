@@ -1,22 +1,33 @@
-<h2>Quote engine</h2>
+
 <div class="container">
      <div class="row">
-        <div class="col-sm-3" *ngFor='let quote of quotes; let i = index'>
+        <div class="col-sm-3" *ngFor='let quote of sortVote; let i = index' >
            <div class="card">
                <div class="card-body">
-                    {{quote.addedquote}} 
+                   <q > {{quote.addedquote}} </q>
+                   
+                     
                </div>
                <div class="card-footer">
-                    {{quote.postDate | date}}
+                    {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
                     <button (click)='toggleDetails(i)'>More details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-detail>
                     
                </div>
            </div> 
         </div>
-    </div>
-    <app-quoteform (addquote)="addNewQuote($event)"></app-quoteform>
+    </div><br><br><br>
+    
 </div>
+<div class="row">
+        <div class="col-md-6">
+                <app-quoteform (addquote)="addNewQuote($event)"></app-quoteform>
+        </div>
+        <div class="col-md-6">
+           <img src="assets/quo7.jpeg" width="760px" height="600px" id="quo7"> 
+        </div>
+    </div>
+    
 
    
 

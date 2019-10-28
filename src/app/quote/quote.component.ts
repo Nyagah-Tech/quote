@@ -8,8 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1, "happy coding", "haha", " Dan", new Date (2026,3,15)),
-    new Quote(2,  "food is food", "mukui"," yaya", new Date(2019,4,18)),
+    new Quote( "It is not enough for us to restrain from doing evil, unless we shall also do good.", "Dan", " Brucelee", new Date (2026,3,15), 5, 2),
+    new Quote(  "Good, better, best. Never let it rest. 'Til your good is better and your better is best.", "mukui","Kevyn Aucoin", new Date(2019,4,18), 8, 1),
+    new Quote( "Of all human activities, man's listening to God is the supreme act of his reasoning and will.","paul","Pope Paul Vi", new Date(2017,4,16), 3, 0),
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -27,12 +28,17 @@ export class QuoteComponent implements OnInit {
   }
 
   addNewQuote(quote){
-    let quotelength = this.quotes.length;
-    quote.id = quotelength+1;
-    quote.postDate = new Date(quote.postDate)
+    // let quotelength = this.quotes.length;
+    // quote.id = quotelength+1;
+    // quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote)
   }
 
+  get sortVote(){
+    return this.quotes.sort((a,b)=> {
+      return (b.upvote)as number - (a.upvote) as number;
+    })
+  }
   
 
   ngOnInit() {

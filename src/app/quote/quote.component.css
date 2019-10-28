@@ -1,0 +1,16 @@
+.card-footer{
+    background-color: black;
+    color:white;
+    font-size: 15px;
+    
+}
+.card-body{
+    background-color: transparent;
+    color:black;
+}
+.card{
+    background-color: transparent;
+}
+#quo7{
+    margin-top:70px;
+}

@@ -1,16 +1,17 @@
 <div class="container-fluid">
-        <h2 class="text-center">Create a new Quote</h2>
+        <h4 class="text-center">Create a new Quote</h4>
         <hr>
         <form (ngSubmit)='submitQuote()' #quoteform='ngForm'> 
             <div class="form-group">
       
                 <label for="quoteadd">Your qoute.</label>
                 <textarea class="form-control" id="quoteadd" rows="4" placeholder="Your quote goes here.." 
-                [(ngModel)]="newQoute.addedquote" name="quoteadd" #quoteadd='ngModel' required ></textarea>
-
+                [(ngModel)]="newQuote.addedquote" name="quoteadd" #quoteadd='ngModel' required ></textarea>
+<!-- 
                 <div [hidden]="addedquote.valid || addedquote.pristine" class="alert alert-danger">
                     <p>quote is required</p>
-                </div>
+                </div> -->
+                typing:: {{newQuote.addedquote}}
             </div>
 
             <div class="form-group">
