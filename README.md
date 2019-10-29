@@ -28,4 +28,4 @@ for the above application to work well or to e installed the following shpuld be
     internet connection
     should be literate.
 ## purpose of project
-
+the above project is aimed at giving a platform where users can post their best quotes to the society as well as like and dislike quote according to their liking.
