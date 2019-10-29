@@ -1,5 +1,5 @@
 # Quote
-
+click here to view the application https://nyagah-tech.github.io/quote/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.The main purpose of the project is to create an apllicatipon where users can add quote and like their favourite quotes.It enables users to be abble to share their quote among each other on a common platform.
 
 ## Development server
