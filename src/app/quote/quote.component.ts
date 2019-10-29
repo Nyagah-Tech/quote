@@ -39,7 +39,15 @@ export class QuoteComponent implements OnInit {
       return (b.upvote)as number - (a.upvote) as number;
     })
   }
-  
+  votedQuote(){
+    let likearr:number []=[];
+    for(let i of this.quotes){
+      likearr.push(i.upvote)
+    }
+    let highvote= Math.max(...likearr);
+    let bestquote= this.quotes.find(quote => quote.upvote === highvote);
+    return bestquote
+  }
 
   ngOnInit() {
   }
