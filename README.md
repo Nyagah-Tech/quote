@@ -23,4 +23,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 ## Installation requirements
-for the above application
+for the above application to work well or to e installed the following shpuld be observed:
+    a device that can access internet.
+    internet connection
+    should be literate.
+## purpose of project
+
