@@ -14,3 +14,34 @@
 #quo7{
     margin-top:70px;
 }
+
+h2{
+    font-family: 'Lobster', cursive;
+    font-size:110px;
+    color:rgb(100, 100, 100);
+    background-color: black;
+}
+#quote1{
+    float: left;
+    padding-left: 10px;
+}
+#intro{
+    /* text-align: center; */
+    padding-left: 470px;
+    padding-right: 50px;
+    font-size: 37px;
+
+}
+footer{
+    background-color: black;
+    color:white;
+    height:150px;
+    margin-bottom: 0;
+}
+h3{
+    font-size: 70px;
+}
+
+#quote2{
+    background-color:whitesmoke;
+}
