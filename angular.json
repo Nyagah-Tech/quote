@@ -25,7 +25,6 @@
             ],
             "styles": [
               "src/styles.css"
-              
             ],
             "scripts": []
           },
@@ -119,8 +118,13 @@
               "devServerTarget": "Quote:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Quote"
 }

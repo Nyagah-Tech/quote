@@ -1,15 +1,23 @@
-
+<div id="hea">
         <h2><b>~QUOTE-MOTOR~</b></h2><br><br><br>
         <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiperceptive.com%2Fquotes%2Fpictures%2Fgeorge-santayana-quote-1.jpg&f=1&nofb=1" width="400px" height="450px" id="quote1"><br><br>
         <p id="intro">If you are in need of motivation and inspiration life quotes look no other but in --<b>QUOTE-MOTOR</b>
           Give a like to your best quote by clicking the more details button.You can also add your own quote by filling the create new form below.. </p>
           <br><br><br><br><br><br><br><br><br>
           <h3><q>View quotes</q></h3><br>
+</div>
+        
         <div id="quote2">
                 <div class="container">
         
                         <div class="row">
-                            <div class="col-sm-3" *ngFor='let quote of sortVote; let i = index' >
+                            <div class="col-sm-3" *ngFor='let quote of quotes; let i = index' >
+                                <div *ngIf='i == votedQuote(); else notequal' appHighlight>
+                                        {{quote.addedquote}}  {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
+                                </div>
+                                <ng-template #notequal>
+                                        {{quote.addedquote}}  {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
+                                </ng-template>
                               <div class="card">
                                   <div class="card-body">
                                       <q > {{quote.addedquote}} </q>
@@ -17,7 +25,11 @@
                                         
                                   </div>
                                   <div class="card-footer">
-                                       posted:  {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
+                                       posted:  {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}<br>
+                                       <button id="like" (click)= "upVote(i)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Linecons_like.svg/600px-Linecons_like.svg.png" width="40px" height="35px" alt="">
+                                       </button>{{quote.upvote}}
+                                       <button id="dis"(click)= "downVote(i)"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Finficons-set-2%2F512%2Fthumbs-down-512.png&f=1&nofb=1" width="40px" height="35px" alt=""></button>{{quote.downvote}}<br>
+                                       
                                        <button (click)='toggleDetails(i)'>More details</button>
                                        <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-detail>
                                        
@@ -40,7 +52,7 @@
        
         <footer>
           <br><br>
-          <p id="foot">@Copyright reserved for Nyagah-Tech</p>
+          <p id="foot">&copy; All rights reserved for Nyagah-Tech</p>
         </footer>
             
         

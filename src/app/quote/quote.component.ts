@@ -7,6 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  
   quotes:Quote[]=[
     new Quote( "It is not enough for us to restrain from doing evil, unless we shall also do good.", "Dan", " Brucelee", new Date (2006,3,15), 0, 0),
     new Quote(  "Good, better, best. Never let it rest. 'Til your good is better and your better is best.", "mukui","Kevyn Aucoin", new Date(2019,2,4), 0, 0),
@@ -33,12 +34,7 @@ export class QuoteComponent implements OnInit {
     // quote.postDate = new Date(quote.postDate)
     this.quotes.push(quote)
   }
-
-  get sortVote(){
-    return this.quotes.sort((a,b)=> {
-      return (b.upvote)as number - (a.upvote) as number;
-    })
-  }
+  
   votedQuote(){
     let likearr:number []=[];
     for(let i of this.quotes){
@@ -47,6 +43,12 @@ export class QuoteComponent implements OnInit {
     let highvote= Math.max(...likearr);
     let bestquote= this.quotes.find(quote => quote.upvote === highvote);
     return bestquote
+  }
+  upVote(index:number){
+    this.quotes[index].upvote ++
+  }
+  downVote(index:number){
+    this.quotes[index].downvote++
   }
 
   ngOnInit() {
