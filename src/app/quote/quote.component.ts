@@ -8,9 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote( "It is not enough for us to restrain from doing evil, unless we shall also do good.", "Dan", " Brucelee", new Date (2026,3,15), 5, 2),
-    new Quote(  "Good, better, best. Never let it rest. 'Til your good is better and your better is best.", "mukui","Kevyn Aucoin", new Date(2019,4,18), 8, 1),
-    new Quote( "Of all human activities, man's listening to God is the supreme act of his reasoning and will.","paul","Pope Paul Vi", new Date(2017,4,16), 3, 0),
+    new Quote( "It is not enough for us to restrain from doing evil, unless we shall also do good.", "Dan", " Brucelee", new Date (2006,3,15), 0, 0),
+    new Quote(  "Good, better, best. Never let it rest. 'Til your good is better and your better is best.", "mukui","Kevyn Aucoin", new Date(2019,2,4), 0, 0),
+    new Quote( "Of all human activities, man's listening to God is the supreme act of his reasoning and will.","paul","Pope Paul Vi", new Date(2017,3,16), 0, 0),
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
