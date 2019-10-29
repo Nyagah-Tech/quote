@@ -26,6 +26,10 @@ h2{
     font-size: 37px;
 
 }
+footer{
+    background-color: black;
+    color:white;
+}
 /* #quote2{
     position: absolute;
     top:400px;
