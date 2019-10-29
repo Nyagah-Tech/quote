@@ -1,49 +1,65 @@
-
-<div class="container">
-
-     <div class="row">
-         <div class="col-sm-3" *ngFor='let quote of sortVote; let i = index' >
-           <div class="card">
-               <div class="card-body">
-                   <q > {{quote.addedquote}} </q>
+<body>
+        <h2><b>~QUOTE-MOTOR~</b></h2><br><br><br>
+        <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fiperceptive.com%2Fquotes%2Fpictures%2Fgeorge-santayana-quote-1.jpg&f=1&nofb=1" width="400px" height="450px" id="quote1"><br><br>
+        <p id="intro">If you are in need of motivation and inspiration life quotes look no other but in --<b>QUOTE-MOTOR</b>
+          Give a like to your best quote by clicking the more details button.You can also add your own quote by filling the create new form below.. </p>
+          <br><br><br><br><br><br><br><br><br>
+          <h3><q>View quotes</q></h3><br>
+        <div id="quote2">
+                <div class="container">
+        
+                        <div class="row">
+                            <div class="col-sm-3" *ngFor='let quote of sortVote; let i = index' >
+                              <div class="card">
+                                  <div class="card-body">
+                                      <q > {{quote.addedquote}} </q>
+                                      
+                                        
+                                  </div>
+                                  <div class="card-footer">
+                                       posted:  {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
+                                       <button (click)='toggleDetails(i)'>More details</button>
+                                       <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-detail>
+                                       
+                                  </div>
+                              </div> 
+                           </div>
+                       </div><br><br><br>
+                       
+                   </div>
+                   <div class="row">
+                           <div class="col-md-6">
+                                   <app-quoteform (addquote)="addNewQuote($event)"></app-quoteform>
+                           </div>
+                           <div class="col-md-6">
+                              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.4M1aYi2lyB6q4Xr2Sm654AHaFj%26pid%3DApi&f=1" width="760px" height="600px" id="quo7"> 
+                           </div>
+                       </div>
                    
-                     
-               </div>
-               <div class="card-footer">
-                    {{quote.postDate | datepipe }} days ago, {{quote.postDate | date}}
-                    <button (click)='toggleDetails(i)'>More details</button>
-                    <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'completeQuote($event, i)'></app-quote-detail>
-                    
-               </div>
-           </div> 
         </div>
-    </div><br><br><br>
-    
-</div>
-<div class="row">
-        <div class="col-md-6">
-                <app-quoteform (addquote)="addNewQuote($event)"></app-quoteform>
-        </div>
-        <div class="col-md-6">
-           <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.4M1aYi2lyB6q4Xr2Sm654AHaFj%26pid%3DApi&f=1" width="760px" height="600px" id="quo7"> 
-        </div>
-    </div>
-    
-
-   
-
-
-    <!-- <ul>
-        <li *ngFor='let quote of quotes'>
-            <div class="card">
-                <div class="card-body">
-                    {{quote}}
+       
+        <footer>
+          <br><br>
+          <p id="foot">@Copyright reserved for Nyagah-Tech</p>
+        </footer>
+            
+        
+           
+        
+        
+            <!-- <ul>
+                <li *ngFor='let quote of quotes'>
+                    <div class="card">
+                        <div class="card-body">
+                            {{quote}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div *ngFor='let quote of quotes'>
+                <div>
+        
                 </div>
-            </div>
-        </li>
-    </ul>
-    <div *ngFor='let quote of quotes'>
-        <div>
-
-        </div>
-    </div> -->
+            </div> -->
+        
+</body>
