@@ -29,6 +29,8 @@ h2{
 footer{
     background-color: black;
     color:white;
+    height:500px;
+    margin-bottom: 0;
 }
 /* #quote2{
     position: absolute;
